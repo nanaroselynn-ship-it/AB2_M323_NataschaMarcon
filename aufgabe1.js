@@ -1,4 +1,3 @@
-
 const alter = 27; 
 
 const person = {
@@ -6,19 +5,21 @@ const person = {
     nachname: "Piranha",
     farbe: "Pink"
 }; 
-console.log(person);
 
 const personAdresse = {
     ...person, 
     adresse: "Floorweg 33"
-
 };
-console.log("Original:", person);
-console.log("New mit Adresse:", personAdresse);
+
 const personMitEmail = {
     ...personAdresse, 
     email: "hallohallo@gmail.com"
-
 }; 
-console.log("vorher:", personAdresse.MitEmail);
-console.log("nacher:", personMitEmail);
+
+console.log("Vorher (in personAdresse):", personAdresse.email);
+console.log("Nachher (in personMitEmail):", personMitEmail.email); 
+
+const { farbe, ...personOhneFarbe } = personMitEmail; 
+
+console.log("Objekt mit Farbe:", personMitEmail);
+console.log("Objekt ohne Farbe:", personOhneFarbe); 
