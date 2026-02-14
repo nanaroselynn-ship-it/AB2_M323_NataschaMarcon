@@ -23,3 +23,11 @@ console.log("Vorher: Thivya ist gugus:", usersErweitert[1]);
  
  console.log("vorher mit ID1:", nameGeaendert); 
  console.log("Nacher ID 1 entfernt:", usersOhneKleinsteId); 
+
+
+ const reviews = [4.5, 4.0, 5.0, 2.0, 1.0, 5.0, 3.0, 4.0, 1.0, 5.0, 4.5, 3.0, 2.5, 2.0];
+ const summe = reviews.reduce((acc, val) => acc + val, 0);
+
+ const durchschnitt = summe / reviews.length; 
+ console.log("Das Total aller Reviews ist: ", summe); 
+ console.log("Der Durchschnitt der Reviews ist: ", durchschnitt); 
